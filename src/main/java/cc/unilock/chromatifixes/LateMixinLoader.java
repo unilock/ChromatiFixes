@@ -17,17 +17,30 @@ public class LateMixinLoader implements ILateMixinLoader {
 
     @Override
     public List<String> getMixins(Set<String> loadedMods) {
+        final boolean cavecontrol = loadedMods.contains("CaveControl");
         final boolean chromaticraft = loadedMods.contains("ChromatiCraft");
 
         List<String> mixins = new ArrayList<>();
+
         if (FMLLaunchHandler.side().isClient()) {
             if (chromaticraft) {
-                // TODO
+                mixins.add("chromaticraft.ChromaClientEventControllerMixin");
             }
         }
+
+        if (cavecontrol) {
+            mixins.add("cavecontrol.CaveLoaderMixin");
+        }
         if (chromaticraft) {
+            mixins.add("chromaticraft.accessor.TileEntityCrystalBroadcasterAccessor");
+            mixins.add("chromaticraft.ProgressionManagerMixin");
+            mixins.add("chromaticraft.PylonFinderMixin");
+            mixins.add("chromaticraft.PylonGeneratorMixin");
+            mixins.add("chromaticraft.TileEntityCrystalBroadcasterMixin");
+            mixins.add("chromaticraft.TileEntityLumenAlvearyEffectMixins");
             mixins.add("chromaticraft.TileEntityWirelessPoweredMixin");
         }
+
         return mixins;
     }
 }

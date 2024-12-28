@@ -2,6 +2,7 @@ package cc.unilock.chromatifixes.mixin.late.chromaticraft;
 
 import Reika.ChromatiCraft.Base.TileEntity.TileEntityAdjacencyUpgrade;
 import Reika.ChromatiCraft.Base.TileEntity.TileEntityWirelessPowered;
+import Reika.ChromatiCraft.Registry.CrystalElement;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,10 +14,8 @@ public class TileEntityWirelessPoweredMixin {
     @Shadow
     private static TileEntityAdjacencyUpgrade.AdjacencyCheckHandlerImpl adjacency;
 
-    @Inject(method = "calcEfficiency", at = @At("HEAD"), cancellable = true)
-    private void calcEfficiency(CallbackInfo ci) {
-        if (this.adjacency == null) {
-            ci.cancel();
-        }
+    @Inject(method = "<init>", at = @At("TAIL"))
+    private void init(CallbackInfo ci) {
+        adjacency = TileEntityAdjacencyUpgrade.getOrCreateAdjacencyCheckHandler(CrystalElement.BLACK, null);
     }
 }
