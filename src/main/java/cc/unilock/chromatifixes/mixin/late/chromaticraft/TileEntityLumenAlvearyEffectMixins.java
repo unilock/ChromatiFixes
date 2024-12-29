@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 @Mixin(targets = {"Reika/ChromatiCraft/ModInterface/Bees/TileEntityLumenAlveary$HumidityMatchingEffect", "Reika/ChromatiCraft/ModInterface/Bees/TileEntityLumenAlveary$TemperatureMatchingEffect"}, remap = false)
 public class TileEntityLumenAlvearyEffectMixins {
     /**
-     * @author foobar
+     * @author thegamemaster1234
      * @reason return true
      */
     @Overwrite

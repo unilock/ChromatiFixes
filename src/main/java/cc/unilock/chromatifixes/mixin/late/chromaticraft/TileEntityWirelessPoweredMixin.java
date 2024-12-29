@@ -14,6 +14,10 @@ public class TileEntityWirelessPoweredMixin {
     @Shadow
     private static TileEntityAdjacencyUpgrade.AdjacencyCheckHandlerImpl adjacency;
 
+    /**
+     * @author thegamemaster1234, unilock
+     * @reason make sure adjacency is never null (the field is static, but the methods referencing it are not!)
+     */
     @Inject(method = "<init>", at = @At("TAIL"))
     private void init(CallbackInfo ci) {
         adjacency = TileEntityAdjacencyUpgrade.getOrCreateAdjacencyCheckHandler(CrystalElement.BLACK, null);

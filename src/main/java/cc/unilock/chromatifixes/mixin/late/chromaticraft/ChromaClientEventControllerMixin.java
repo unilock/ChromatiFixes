@@ -9,6 +9,10 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(value = ChromaClientEventController.class, remap = false)
 public class ChromaClientEventControllerMixin {
+    /**
+     * @author thegamemaster1234
+     * @reason catch Exception
+     */
     @WrapMethod(method = "updateGlowCliffRendering")
     private void updateGlowCliffRendering(TickEvent.ClientTickEvent evt, Operation<Void> original) {
         try {

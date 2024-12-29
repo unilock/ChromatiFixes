@@ -20,8 +20,8 @@ public class PylonGeneratorMixin {
     private EnumMap<CrystalElement, Collection<PylonGenerator.PylonEntry>> colorCache;
 
     /**
-     * @author foobar
-     * @reason catch ConcurrentModificationException; repeat search if necessary
+     * @author thegamemaster1234
+     * @reason catch ConcurrentModificationException and retry if necessary
      */
     @Overwrite
     public PylonGenerator.PylonEntry getNearestPylonSpawn(World world, double x, double y, double z, CrystalElement e) {

@@ -13,6 +13,10 @@ import java.util.Set;
 
 @Mixin(value = PylonFinder.class, remap = false)
 public class PylonFinderMixin {
+    /**
+     * @author thegamemaster1234
+     * @reason catch Exception and retry if necessary
+     */
     @ModifyVariable(method = "canRainOn", at = @At("HEAD"), argsOnly = true)
     private static Set<Coordinate> canRainOn(Set<Coordinate> set) {
         boolean repeat;

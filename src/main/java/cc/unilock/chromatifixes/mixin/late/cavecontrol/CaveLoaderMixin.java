@@ -10,6 +10,10 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(value = CaveLoader.class, remap = false)
 public class CaveLoaderMixin {
+    /**
+     * @author thegamemaster1234
+     * @reason catch Exception and never return a null biome
+     */
     @WrapMethod(method = "getEffectiveBiome")
     private BiomeGenBase getEffectiveBiome(World world, int x, int z, Operation<BiomeGenBase> original) {
         BiomeGenBase biome = null;

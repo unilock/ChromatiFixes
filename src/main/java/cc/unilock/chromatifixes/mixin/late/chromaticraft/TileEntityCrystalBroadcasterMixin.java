@@ -15,8 +15,8 @@ public abstract class TileEntityCrystalBroadcasterMixin extends TileEntityCrysta
     private WorldLocation interference;
 
     /**
-     * @author foobar
-     * @reason check thisWorldLocation != thatWorldLocation (MixinExtras 0.5.0 will be able to do this without an @Overwrite)
+     * @author thegamemaster1234
+     * @reason check thisWorldLocation != thatWorldLocation to prevent self-interference (MixinExtras 0.5.0 will be able to do this without an @Overwrite)
      */
     @Overwrite
     private void checkInterfere() {
@@ -25,6 +25,7 @@ public abstract class TileEntityCrystalBroadcasterMixin extends TileEntityCrysta
             WorldLocation thisWorldLocation = new WorldLocation(this);
             WorldLocation thatWorldLocation = new WorldLocation(te);
 
+            // the change
             if (!thisWorldLocation.equals(thatWorldLocation)) {
                 this.interference = thatWorldLocation;
                 ((TileEntityCrystalBroadcasterAccessor) te).setInterference(thisWorldLocation);

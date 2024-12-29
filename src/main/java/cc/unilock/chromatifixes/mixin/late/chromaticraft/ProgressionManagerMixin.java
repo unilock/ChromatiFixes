@@ -17,10 +17,14 @@ public abstract class ProgressionManagerMixin {
     @Shadow
     public abstract Collection<ProgressStage> getStagesFor(EntityPlayer ep);
 
+    /**
+     * @author unilock
+     * @reason use HashSet instead of ArrayList to have equals ignore order
+     */
     // apologies for the unconditional cancel, but @Overwrite kept asking for this method to be transient...?
     @Inject(method = "isProgressionEqual", at = @At("HEAD"), cancellable = true)
     private void isProgressionEqual(EntityPlayer ep1, EntityPlayer ep2, ProgressStage[] ignore, CallbackInfoReturnable<Boolean> cir) {
-        // change: use HashSet instead of ArrayList such that equals ignores order
+        // the change
         Collection<ProgressStage> c1 = new HashSet<>(this.getStagesFor(ep1));
         Collection<ProgressStage> c2 = new HashSet<>(this.getStagesFor(ep2));
 
