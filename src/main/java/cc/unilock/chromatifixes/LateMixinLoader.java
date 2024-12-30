@@ -19,12 +19,17 @@ public class LateMixinLoader implements ILateMixinLoader {
     public List<String> getMixins(Set<String> loadedMods) {
         final boolean cavecontrol = loadedMods.contains("CaveControl");
         final boolean chromaticraft = loadedMods.contains("ChromatiCraft");
+        final boolean dragonrealmcore = loadedMods.contains("DragonRealmCore");
 
         List<String> mixins = new ArrayList<>();
 
         if (FMLLaunchHandler.side().isClient()) {
             if (chromaticraft) {
-                mixins.add("chromaticraft.ChromaClientEventControllerMixin");
+                mixins.add("chromaticraft.client.ArtefactSpawnerMixin");
+                mixins.add("chromaticraft.client.ChromaClientEventControllerMixin");
+            }
+            if (dragonrealmcore) {
+                mixins.add("dragonrealmcore.client.DREventsMixin");
             }
         }
 
@@ -39,6 +44,11 @@ public class LateMixinLoader implements ILateMixinLoader {
             mixins.add("chromaticraft.TileEntityCrystalBroadcasterMixin");
             mixins.add("chromaticraft.TileEntityLumenAlvearyEffectMixins");
             mixins.add("chromaticraft.TileEntityWirelessPoweredMixin");
+        }
+        if (dragonrealmcore) {
+            mixins.add("dragonrealmcore.BlockT2HexGeneratorMixin");
+            mixins.add("dragonrealmcore.BlockT3HexGeneratorMixin");
+            mixins.add("dragonrealmcore.EnergizationManagerMixin");
         }
 
         return mixins;

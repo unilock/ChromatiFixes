@@ -1,4 +1,4 @@
-package cc.unilock.chromatifixes.mixin.late.chromaticraft;
+package cc.unilock.chromatifixes.mixin.late.chromaticraft.client;
 
 import Reika.ChromatiCraft.ChromaClientEventController;
 import cc.unilock.chromatifixes.ChromatiFixes;
