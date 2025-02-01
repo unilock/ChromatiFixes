@@ -15,6 +15,8 @@ Fixes:
   - Prevents the Lumen Beacon from interfering with itself
   - Enable Lumen Alveary Humidity and Temperature controls when the Princess is unable to work (as these are designed to allow the Princess to work in the first place)
   - Prevents crashes caused by Adjacency Cores on neighbor state updates
+- Satisforestry
+  - Allow Pressurizer multiblock to receive RotaryCraft power via Power Hub
 - DragonRealmCore
   - Allows disabling the Nether shader
   - Prevents NullPointerExceptions caused by Hex Generators

@@ -19,6 +19,7 @@ public class LateMixinLoader implements ILateMixinLoader {
     public List<String> getMixins(Set<String> loadedMods) {
         final boolean cavecontrol = loadedMods.contains("CaveControl");
         final boolean chromaticraft = loadedMods.contains("ChromatiCraft");
+        final boolean satisforestry = loadedMods.contains("Satisforestry");
         final boolean dragonrealmcore = loadedMods.contains("DragonRealmCore");
 
         List<String> mixins = new ArrayList<>();
@@ -44,6 +45,9 @@ public class LateMixinLoader implements ILateMixinLoader {
             mixins.add("chromaticraft.TileEntityCrystalBroadcasterMixin");
             mixins.add("chromaticraft.TileEntityLumenAlvearyEffectMixins");
             mixins.add("chromaticraft.TileEntityWirelessPoweredMixin");
+        }
+        if (satisforestry) {
+            mixins.add("satisforestry.TileShaftConnectionMixin");
         }
         if (dragonrealmcore) {
             mixins.add("dragonrealmcore.BlockT2HexGeneratorMixin");
