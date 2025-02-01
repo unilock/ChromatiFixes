@@ -20,4 +20,4 @@ Fixes:
 - DragonRealmCore
   - Allows disabling the Nether shader
   - Prevents NullPointerExceptions caused by Hex Generators
-  - Prevents crashes in `EnergizationManager#getEnergizationLevel` (however, the chosen fix prevents playing with the "Atmospheric Permeability Mediation" mechanic)
+  - Prevents crashes in `EnergizationManager#getEnergizationLevel` (however, the chosen fix prevents playing with the "Atmospheric Permeability Mediation" mechanic - thus it is configurable, but enabled by default)

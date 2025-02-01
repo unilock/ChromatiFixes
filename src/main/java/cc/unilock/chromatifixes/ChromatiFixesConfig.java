@@ -9,4 +9,7 @@ public class ChromatiFixesConfig {
 
     @Config.DefaultBoolean(false)
     public static boolean disableNetherShader;
+
+    @Config.DefaultBoolean(true)
+    public static boolean energizationManagerFix;
 }

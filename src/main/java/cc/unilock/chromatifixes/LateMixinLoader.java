@@ -52,7 +52,9 @@ public class LateMixinLoader implements ILateMixinLoader {
         if (dragonrealmcore) {
             mixins.add("dragonrealmcore.BlockT2HexGeneratorMixin");
             mixins.add("dragonrealmcore.BlockT3HexGeneratorMixin");
-            mixins.add("dragonrealmcore.EnergizationManagerMixin");
+            if (ChromatiFixesConfig.energizationManagerFix) {
+                mixins.add("dragonrealmcore.EnergizationManagerMixin");
+            }
         }
 
         return mixins;
