@@ -43,5 +43,6 @@ dependencies {
     devOnlyNonPublishable(rfg.deobf("curse.maven:rotarycraft-235596:4721191"))
     devOnlyNonPublishable(rfg.deobf("curse.maven:satisforestry-430986:4721194"))
 
+    devOnlyNonPublishable(rfg.deobf(project.files("libs/Waila-1.5.10_1.7.10.jar")))
     devOnlyNonPublishable(rfg.deobf(project.files("libs/DragonRealmCore 1.7.10 V33a.jar")))
 }
