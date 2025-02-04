@@ -66,6 +66,15 @@ public class LateMixinLoader implements ILateMixinLoader {
             mixins.add("reactorcraft.TileEntityReactorBaseMixin");
             mixins.add("reactorcraft.TileEntityWaterCellMixin");
         }
+        if (reactorcraft) {
+            mixins.add("reactorcraft.accessor.TileEntityHeatPipeAccessor");
+            mixins.add("reactorcraft.accessor.TileEntityNuclearBoilerAccessor");
+            mixins.add("reactorcraft.accessor.TileEntityReactorBaseAccessor");
+            mixins.add("reactorcraft.accessor.TileEntityWaterCellAccessor");
+            mixins.add("reactorcraft.TileEntityHeatPipeMixin");
+            mixins.add("reactorcraft.TileEntityReactorBaseMixin");
+            mixins.add("reactorcraft.TileEntityWaterCellMixin");
+        }
 
         return mixins;
     }
