@@ -20,6 +20,7 @@ public class LateMixinLoader implements ILateMixinLoader {
         final boolean cavecontrol = loadedMods.contains("CaveControl");
         final boolean chromaticraft = loadedMods.contains("ChromatiCraft");
         final boolean dragonrealmcore = loadedMods.contains("DragonRealmCore");
+        final boolean reactorcraft = loadedMods.contains("ReactorCraft");
 
         List<String> mixins = new ArrayList<>();
 
@@ -49,6 +50,15 @@ public class LateMixinLoader implements ILateMixinLoader {
             mixins.add("dragonrealmcore.BlockT2HexGeneratorMixin");
             mixins.add("dragonrealmcore.BlockT3HexGeneratorMixin");
             mixins.add("dragonrealmcore.EnergizationManagerMixin");
+        }
+        if (reactorcraft) {
+            mixins.add("reactorcraft.accessor.TileEntityHeatPipeAccessor");
+            mixins.add("reactorcraft.accessor.TileEntityNuclearBoilerAccessor");
+            mixins.add("reactorcraft.accessor.TileEntityReactorBaseAccessor");
+            mixins.add("reactorcraft.accessor.TileEntityWaterCellAccessor");
+            mixins.add("reactorcraft.TileEntityHeatPipeMixin");
+            mixins.add("reactorcraft.TileEntityReactorBaseMixin");
+            mixins.add("reactorcraft.TileEntityWaterCellMixin");
         }
 
         return mixins;
