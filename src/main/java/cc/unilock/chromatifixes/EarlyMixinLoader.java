@@ -5,7 +5,7 @@ import com.gtnewhorizon.gtnhlib.config.ConfigurationManager;
 import com.gtnewhorizon.gtnhmixins.IEarlyMixinLoader;
 import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -27,7 +27,17 @@ public class EarlyMixinLoader implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public List<String> getMixins(Set<String> loadedCoreMods) {
-        return Collections.emptyList();
+        final boolean dragonrealmcore = loadedCoreMods.contains("Reika.DragonRealmCore.DragonRealmASM");
+
+        List<String> mixins = new ArrayList<>();
+
+        if (dragonrealmcore) {
+            if (ChromatiFixesConfig.disableTerritoryStrongholdSystem) {
+                mixins.add("dragonrealmcore.stronghold.StrongholdLocationControlMixin");
+            }
+        }
+
+        return mixins;
     }
 
     @Override

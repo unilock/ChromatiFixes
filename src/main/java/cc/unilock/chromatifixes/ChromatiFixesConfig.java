@@ -11,5 +11,8 @@ public class ChromatiFixesConfig {
     public static boolean disableNetherShader;
 
     @Config.DefaultBoolean(true)
+    public static boolean disableTerritoryStrongholdSystem;
+
+    @Config.DefaultBoolean(true)
     public static boolean energizationManagerFix;
 }

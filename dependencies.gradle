@@ -34,7 +34,7 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    implementation("com.github.GTNewHorizons:GTNHLib:0.6.16:dev") { transitive = false }
+    implementation("com.github.GTNewHorizons:GTNHLib:0.6.17:dev") { transitive = false }
 
     devOnlyNonPublishable(rfg.deobf("curse.maven:dragonapi-235591:4722480"))
     devOnlyNonPublishable(rfg.deobf("curse.maven:cavecontrol-235605:4721202"))
