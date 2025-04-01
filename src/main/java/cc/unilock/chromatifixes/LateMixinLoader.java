@@ -53,6 +53,7 @@ public class LateMixinLoader implements ILateMixinLoader {
             mixins.add("dragonrealmcore.BlockT2HexGeneratorMixin");
             mixins.add("dragonrealmcore.BlockT3HexGeneratorMixin");
             if (ChromatiFixesConfig.disableTerritoryStrongholdSystem) {
+                mixins.add("cavecontrol.stronghold.ControllableStrongholdGenMixin");
                 mixins.add("dragonrealmcore.stronghold.DREventsMixin");
                 mixins.add("dragonrealmcore.stronghold.StrongholdSeedMixCommandMixin");
             }
