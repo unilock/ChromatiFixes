@@ -27,8 +27,11 @@ public class LateMixinLoader implements ILateMixinLoader {
 
         if (FMLLaunchHandler.side().isClient()) {
             if (chromaticraft) {
+                mixins.add("chromaticraft.client.accessor.WarpPointAccessor");
                 mixins.add("chromaticraft.client.ArtefactSpawnerMixin");
                 mixins.add("chromaticraft.client.ChromaClientEventControllerMixin");
+                mixins.add("chromaticraft.client.ChromaDimensionManagerMixin");
+                mixins.add("chromaticraft.client.WarpPointDataMixin");
             }
             if (dragonrealmcore) {
                 mixins.add("dragonrealmcore.client.DREventsMixin");
