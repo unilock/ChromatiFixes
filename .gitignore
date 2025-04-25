@@ -1,4 +1,4 @@
-/libs/
+/libs/*.jar
 
 .gradle
 .settings
