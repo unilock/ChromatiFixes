@@ -16,6 +16,7 @@ Fixes:
   - Prevents the Lumen Beacon from interfering with itself
   - Enable Lumen Alveary Humidity and Temperature controls when the Princess is unable to work (as these are designed to allow the Princess to work in the first place)
   - Prevents crashes caused by Adjacency Cores on neighbor state updates
+  - Greatly speed up world generation by caching an expensive call in `DungeonGenerator.updateNoisemaps`
 - DragonAPI
   - With `disableClientSpecificConfigs` enabled, all "client-specific" configs use the same keys across all systems, allowing them to be packaged with modpacks and such
 - Satisforestry

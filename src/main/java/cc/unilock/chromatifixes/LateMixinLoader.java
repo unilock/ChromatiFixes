@@ -43,6 +43,7 @@ public class LateMixinLoader implements ILateMixinLoader {
         }
         if (chromaticraft) {
             mixins.add("chromaticraft.accessor.TileEntityCrystalBroadcasterAccessor");
+            mixins.add("chromaticraft.DungeonGeneratorMixin");
             mixins.add("chromaticraft.ProgressionManagerMixin");
             mixins.add("chromaticraft.PylonFinderMixin");
             mixins.add("chromaticraft.PylonGeneratorMixin");
