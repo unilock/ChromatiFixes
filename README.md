@@ -17,6 +17,8 @@ Fixes:
   - Prevents the Lumen Beacon from interfering with itself (thegamemaster1234)
   - Enable Lumen Alveary Humidity and Temperature controls when the Princess is unable to work (as these are designed to allow the Princess to work in the first place) (thegamemaster1234)
   - Prevents crashes caused by Adjacency Cores on neighbor state updates (thegamemaster1234, unilock)
+  - Reenables and moves the Item Fabricator transferRect (the thing you click on to open recipes that use the Item Fabricator in NEI) to be over the progress bar (FlamingKetchup)
+  - Fix bug preventing recent GTNEI versions from loading ChC reciper handlers (https://github.com/GTNewHorizons/NotEnoughItems/issues/595) (FlamingKetchup)
 - DragonAPI
   - With `disableClientSpecificConfigs` enabled, all "client-specific" configs use the same keys across all systems, allowing them to be packaged with modpacks and such (unilock)
 - Satisforestry
