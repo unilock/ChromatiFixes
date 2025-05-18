@@ -10,6 +10,7 @@ Fixes:
 - ChromatiCraft
   - With `disableArtefactShader` enabled, disables the Artefact shader (unilock)
   - Prevents crashes in `ChromaClientEventController#updateGlowCliffRendering` (thegamemaster1234)
+  - Fixes the loadTransferRects method in a few NEI handlers, making them able to load with GTNH!NEI (FlamingKetchup)
   - Adds support for Xaero's maps where appropriate (unilock)
   - Caches the world directory path used during dungeon generation to make it much faster (FlamingKetchup)
   - Ignores the order progress was made in `ProgressionManager#isProgressionEqual` (unilock)
