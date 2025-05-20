@@ -28,10 +28,10 @@ public abstract class FabricatorHandlerMixin extends TemplateRecipeHandler {
 
     /**
      * @author FlamingKetchup
-     * @reason Remove client player openContainer instanceof check; @Overwrite to fail hard
+     * @reason Remove client player openContainer instanceof check and adjust to proper location and size; @Overwrite to fail hard
      */
     @Overwrite
     public void loadTransferRects() {
-        transferRects.add(new RecipeTransferRect(new Rectangle(32, -12, 105, 10), "ccfabric"));
+        transferRects.add(new RecipeTransferRect(new Rectangle(60, 4, 70, 56), "ccfabric"));
     }
 }
