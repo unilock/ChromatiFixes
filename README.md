@@ -19,6 +19,7 @@ Fixes:
   - Enable Lumen Alveary Humidity and Temperature controls when the Princess is unable to work (as these are designed to allow the Princess to work in the first place) (thegamemaster1234)
   - Prevents crashes caused by Adjacency Cores on neighbor state updates (thegamemaster1234, unilock)
 - DragonAPI
+  - Prevents NullPointerExceptions caused by `AbstractSearch$FoundPath#getPath`, preventing ChromatiCraft's Bezier Crystals from causing an Internal Server Error
   - With `disableClientSpecificConfigs` enabled, all "client-specific" configs use the same keys across all systems, allowing them to be packaged with modpacks and such (unilock)
 - Satisforestry
   - Allow Pressurizer multiblock to receive RotaryCraft power via Power Hub (thegamemaster1234)

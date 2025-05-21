@@ -55,6 +55,7 @@ public class LateMixinLoader implements ILateMixinLoader {
             mixins.add("chromaticraft.TileEntityWirelessPoweredMixin");
         }
         if (dragonapi) {
+            mixins.add("dragonapi.AbstractSearchFoundPathMixin");
             if (ChromatiFixesConfig.disableClientSpecificConfigs) {
                 mixins.add("dragonapi.ControlledConfigMixin");
             }
