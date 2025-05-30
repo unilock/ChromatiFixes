@@ -17,6 +17,11 @@ public class ChromatiFixesConfig {
     @Config.RequiresMcRestart
     public static boolean disableClientSpecificConfigs;
 
+    @Config.Comment("Disables DragonRealmCore's TickIntercept ASM (pauses the server when no players are online; disabled by default in DragonRealmCore config)")
+    @Config.DefaultBoolean(true)
+    @Config.RequiresMcRestart
+    public static boolean disableTickInterceptASM;
+
     @Config.Comment("Disables the TerritoryZone-based Stronghold generation system from DragonRealmCore")
     @Config.DefaultBoolean(true)
     @Config.RequiresMcRestart

@@ -24,6 +24,7 @@ Fixes:
 - Satisforestry
   - Allow Pressurizer multiblock to receive RotaryCraft power via Power Hub (thegamemaster1234)
 - DragonRealmCore
+  - With `disableTickInterceptASM` enabled, forcibly disables DragonRealmCore's "TickIntercept" class transformer - this prevents DRC's "PAUSEOFFLINE" config (disabled by default!) from functioning, but fixes compatibility with GTNHLib 0.6.19+ (unilock)
   - With `disableNetherShader` enabled, disables the Nether "heat" shader (unilock)
   - With `disableTerritoryStrongholdSystem` enabled, disables the TerritoryStrongholdSystem (unilock)
   - Prevents NullPointerExceptions caused by Hex Generators (thegamemaster1234)
