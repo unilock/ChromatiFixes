@@ -22,6 +22,7 @@ public class LateMixinLoader implements ILateMixinLoader {
         final boolean dragonapi = loadedMods.contains("DragonAPI");
         final boolean satisforestry = loadedMods.contains("Satisforestry");
         final boolean dragonrealmcore = loadedMods.contains("DragonRealmCore");
+        final boolean tconstruct = loadedMods.contains("TConstruct");
 
         List<String> mixins = new ArrayList<>();
 
@@ -74,6 +75,13 @@ public class LateMixinLoader implements ILateMixinLoader {
             }
             if (ChromatiFixesConfig.energizationManagerFix) {
                 mixins.add("dragonrealmcore.EnergizationManagerMixin");
+            }
+
+            mixins.add("dragonrealmcore.DRBeesMixin");
+            mixins.add("dragonrealmcore.ReflectiveManagersMixin");
+            if (tconstruct) {
+                mixins.add("dragonrealmcore.tconstruct.ReflectiveManagersMixin");
+                mixins.add("dragonrealmcore.tconstruct.SmelteryLogicAccessor");
             }
         }
 
