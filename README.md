@@ -22,6 +22,7 @@ Fixes:
   - Prevents NullPointerExceptions caused by `AbstractSearch$FoundPath#getPath`, preventing ChromatiCraft's Bezier Crystals from causing an Internal Server Error
   - With `disableClientSpecificConfigs` enabled, all "client-specific" configs use the same keys across all systems, allowing them to be packaged with modpacks and such (unilock)
 - Satisforestry
+  - Prevents a ClassCastException when removing a Slug item from slot 39 of any non-player inventory (unilock)
   - Allow Pressurizer multiblock to receive RotaryCraft power via Power Hub (thegamemaster1234)
 - DragonRealmCore
   - With `disableTickInterceptASM` enabled, forcibly disables DragonRealmCore's "TickIntercept" class transformer - this prevents DRC's "PAUSEOFFLINE" config (disabled by default!) from functioning, but fixes compatibility with GTNHLib 0.6.19+ (unilock)

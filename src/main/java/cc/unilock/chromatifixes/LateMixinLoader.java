@@ -61,6 +61,7 @@ public class LateMixinLoader implements ILateMixinLoader {
             }
         }
         if (satisforestry) {
+            mixins.add("satisforestry.SFEventsMixin");
             mixins.add("satisforestry.TileShaftConnectionMixin");
         }
         if (dragonrealmcore) {
