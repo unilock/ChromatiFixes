@@ -1,6 +1,7 @@
 # ChromatiFixes
 
-Various fixes for issues found in some of Reika's mods
+Various fixes for issues found in some of Reika's mods.  
+[GTNHLib](https://github.com/GTNewHorizons/GTNHLib) and [UniMixins](https://github.com/LegacyModdingMC/UniMixins) required.
 
 Most credit goes to [gamrguy](https://github.com/gamrguy) a.k.a. "RobotLucca" a.k.a. "thegamemaster1234" for creating the original ASM-based ChromatiFixes
 
