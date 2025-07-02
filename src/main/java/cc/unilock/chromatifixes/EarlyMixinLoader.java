@@ -18,16 +18,6 @@ public class EarlyMixinLoader implements IFMLLoadingPlugin, IEarlyMixinLoader {
         } catch (ConfigException e) {
             throw new RuntimeException(e);
         }
-        if (ChromatiFixesConfig.disableTickInterceptASM) {
-            try {
-                Field argsField = ReikaJVMParser.class.getDeclaredField("args");
-                argsField.setAccessible(true);
-                HashSet<String> args = (HashSet<String>) argsField.get(null);
-                args.add("-DragonAPI_disable_ASM_TICKINTERCEPT");
-            } catch (Throwable e) {
-                throw new RuntimeException(e);
-            }
-        }
     }
 
     @Override
@@ -37,6 +27,18 @@ public class EarlyMixinLoader implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public List<String> getMixins(Set<String> loadedCoreMods) {
+        if (loadedCoreMods.contains("Reika.DragonRealmCore.DragonRealmASM")) {
+            if (ChromatiFixesConfig.disableTickInterceptASM) {
+                try {
+                    Field argsField = ReikaJVMParser.class.getDeclaredField("args");
+                    argsField.setAccessible(true);
+                    HashSet<String> args = (HashSet<String>) argsField.get(null);
+                    args.add("-DragonAPI_disable_ASM_TICKINTERCEPT");
+                } catch (Throwable e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
         return Collections.emptyList();
     }
 
