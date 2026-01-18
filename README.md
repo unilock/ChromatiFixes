@@ -1,6 +1,6 @@
 # ChromatiFixes
 
-Various fixes for issues found in some of Reika's mods.  
+Various fixes for issues found in some of Reika's mods.
 [GTNHLib](https://github.com/GTNewHorizons/GTNHLib) and [UniMixins](https://github.com/LegacyModdingMC/UniMixins) required.
 
 Most credit goes to [gamrguy](https://github.com/gamrguy) a.k.a. "RobotLucca" a.k.a. "thegamemaster1234" for creating the original ASM-based ChromatiFixes
@@ -18,6 +18,7 @@ Fixes:
   - Prevents random ConcurrentModificationExceptions during pylon overlay rendering (thegamemaster1234)
   - Prevents the Lumen Beacon from interfering with itself (thegamemaster1234)
   - Enable Lumen Alveary Humidity and Temperature controls when the Princess is unable to work (as these are designed to allow the Princess to work in the first place) (thegamemaster1234)
+  - Allows Cave Crystals and Potion Crystals to work with the Player Imitation Core, even if the player isn't in the immediate vicinity (unilock)
   - Prevents crashes caused by Adjacency Cores on neighbor state updates (thegamemaster1234, unilock)
 - DragonAPI
   - Prevents NullPointerExceptions caused by `AbstractSearch$FoundPath#getPath`, preventing ChromatiCraft's Bezier Crystals from causing an Internal Server Error
