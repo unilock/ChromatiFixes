@@ -10,6 +10,10 @@ import java.util.LinkedList;
 
 @Mixin(value = AbstractSearch.FoundPath.class, remap = false)
 public class AbstractSearchFoundPathMixin {
+    /**
+     * @author unilock
+     * @reason catch NullPointerException
+     */
     @WrapMethod(method = "getPath")
     private LinkedList<Coordinate> getPath(Operation<LinkedList<Coordinate>> original) {
         try {
